@@ -88,16 +88,6 @@ public final class Sorted<T> extends CollectionEnvelope<T> {
      * Ctor.
      * @param src The underlying collection
      * @param cmp The comparator
-     * @since 0.23
-     */
-    public Sorted(final Comparator<T> cmp, final Iterator<T> src) {
-        this(cmp, new CollectionOf<>(src));
-    }
-
-    /**
-     * Ctor.
-     * @param src The underlying collection
-     * @param cmp The comparator
      */
     public Sorted(final Comparator<T> cmp, final Iterable<T> src) {
         this(cmp, new CollectionOf<>(src));

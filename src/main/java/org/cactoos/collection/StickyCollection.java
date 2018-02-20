@@ -54,15 +54,6 @@ public final class StickyCollection<E> extends CollectionEnvelope<E> {
     /**
      * Ctor.
      * @param items The array
-     * @since 0.21
-     */
-    public StickyCollection(final Iterator<E> items) {
-        this(new IterableOf<>(items));
-    }
-
-    /**
-     * Ctor.
-     * @param items The array
      */
     public StickyCollection(final Iterable<E> items) {
         this(new CollectionOf<>(items));

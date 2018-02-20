@@ -57,16 +57,6 @@ public final class Mapped<X, Y> extends CollectionEnvelope<Y> {
      * Ctor.
      * @param src Source collection
      * @param fnc Func
-     * @since 0.23
-     */
-    public Mapped(final Func<X, Y> fnc, final Iterator<X> src) {
-        this(fnc, new IterableOf<>(src));
-    }
-
-    /**
-     * Ctor.
-     * @param src Source collection
-     * @param fnc Func
      */
     public Mapped(final Func<X, Y> fnc, final Iterable<X> src) {
         this(fnc, new CollectionOf<>(src));

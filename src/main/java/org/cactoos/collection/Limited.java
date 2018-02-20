@@ -54,16 +54,6 @@ public final class Limited<X> extends CollectionEnvelope<X> {
      * Ctor.
      * @param src Source collection
      * @param lmt Requested number of elements
-     * @since 0.23
-     */
-    public Limited(final int lmt, final Iterator<X> src) {
-        this(lmt, new IterableOf<>(src));
-    }
-
-    /**
-     * Ctor.
-     * @param src Source collection
-     * @param lmt Requested number of elements
      */
     public Limited(final int lmt, final Iterable<X> src) {
         this(lmt, new CollectionOf<>(src));

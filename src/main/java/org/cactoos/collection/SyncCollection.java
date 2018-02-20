@@ -61,14 +61,6 @@ public final class SyncCollection<T> extends CollectionEnvelope<T> {
 
     /**
      * Ctor.
-     * @param src An {@link Iterator}
-     */
-    public SyncCollection(final Iterator<T> src) {
-        this(new IterableOf<>(src));
-    }
-
-    /**
-     * Ctor.
      * @param src An {@link Iterable}
      */
     public SyncCollection(final Iterable<T> src) {
