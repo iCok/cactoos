@@ -55,15 +55,6 @@ public final class Mapped<X, Y> extends IterableEnvelope<Y> {
      * @param fnc Func
      * @param src Source iterable
      */
-    public Mapped(final Func<X, Y> fnc, final Iterator<X> src) {
-        this(fnc, new IterableOf<X>(src));
-    }
-
-    /**
-     * Ctor.
-     * @param fnc Func
-     * @param src Source iterable
-     */
     public Mapped(final Func<X, Y> fnc, final Iterable<X> src) {
         super(() -> () -> new org.cactoos.iterator.Mapped<>(
             fnc, src.iterator()

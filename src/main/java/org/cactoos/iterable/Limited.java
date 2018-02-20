@@ -56,15 +56,6 @@ public final class Limited<T> extends IterableEnvelope<T> {
      * @param lmt The requested number of elements
      * @param itr The underlying iterable
      */
-    public Limited(final int lmt, final Iterator<T> itr) {
-        this(lmt, new IterableOf<>(itr));
-    }
-
-    /**
-     * Ctor.
-     * @param lmt The requested number of elements
-     * @param itr The underlying iterable
-     */
     public Limited(final int lmt, final Iterable<T> itr) {
         super(() -> () -> new org.cactoos.iterator.Limited<>(
             lmt, itr.iterator()

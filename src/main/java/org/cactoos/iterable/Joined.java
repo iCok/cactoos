@@ -51,15 +51,6 @@ public final class Joined<T> extends IterableEnvelope<T> {
     /**
      * Ctor.
      * @param items Items to concatenate
-     * @since 0.21
-     */
-    public Joined(final Iterator<Iterable<T>> items) {
-        this(new IterableOf<>(items));
-    }
-
-    /**
-     * Ctor.
-     * @param items Items to concatenate
      */
     public Joined(final Iterable<Iterable<T>> items) {
         super(() -> {

@@ -50,15 +50,6 @@ public final class Shuffled<T> extends IterableEnvelope<T> {
     /**
      * Ctor.
      * @param src The underlying iterable
-     * @since 0.23
-     */
-    public Shuffled(final Iterator<T> src) {
-        this(new IterableOf<>(src));
-    }
-
-    /**
-     * Ctor.
-     * @param src The underlying iterable
      */
     public Shuffled(final Iterable<T> src) {
         super(() -> () -> new org.cactoos.iterator.Shuffled<>(src.iterator()));
